@@ -12,6 +12,8 @@ body {
 
 * {
     font-family: "Jetbrains mono";
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -22,10 +24,12 @@ h1,
 h2,
 h3 {
     color: #FFFFFF;
+    margin-bottom: 4px;
 }
 
 p {
-    color: #E0E0E0
+    color: #E0E0E0;
+    margin-top: 3px;
 }
 
 .discord:hover {
@@ -48,7 +52,7 @@ p {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 40px
+    height: 40px;
 }
 
 .arch {
@@ -62,7 +66,8 @@ p {
     text-decoration: none;
 }
 
-.card {
+.card, 
+.project1 {
     background-color: #242424;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -79,20 +84,12 @@ p {
     transform: scale(1.01);
 }
 
-.card a {
-    color: aqua;
+a {
+    color: #9cdbfb;
 }
 
 .project1 {
-    background-color: #242424;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 47%;
-    padding: 8px;
-    margin: 8px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
 }
 
 .project1:hover {
@@ -100,34 +97,25 @@ p {
     transform: scale(1.01);
 }
 
-.obomne {
-    transition: all 0.1s ease-in-out;
-}
-
-.Obomn {
-    border-bottom: 2px solid #ffffff; 
-}
-
-.obomne:hover {
-    transform: scale(1.02);
-    border-bottom: 2px solid #ffffff; 
-}
-
-.myprojects {
-    transition: all 0.1s ease-in-out;
-}
-
-.myproject {
+.selected {
     border-bottom: 2px solid #ffffff;
 }
 
-.myprojects:hover {
+.pages a {
+    transition: all 0.1s ease-in-out;
+}
+
+.pages a:hover {
     transform: scale(1.02);
-    border-bottom: 2px solid #ffffff; 
 }
 
 @media (width <= 600px) {
     .card {
         width: 90%;
     }
+}
+
+#avatar-display {
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
