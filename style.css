@@ -8,6 +8,8 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	color: #e0e0e0ae;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 * {
@@ -85,14 +87,26 @@ p {
 	}
 }
 
-.contact-icon {
-	height: 24px;
-	vertical-align: middle;
-	margin-left: 1px;
+.pansan {
+	image-rendering: pixelated;
+	position: relative;
+	z-index: 1;
+	height: 35px;
+	transition: all 0.3s ease-in-out;
+}
+
+.pansan:hover {
+	transform: scale(1.1);
 }
 
 .card:hover {
 	transform: scale(1.02);
+}
+
+.contact-icon {
+	height: 24px;
+	vertical-align: middle;
+	margin-left: 1px;
 }
 
 a {
@@ -129,6 +143,8 @@ a {
 #avatar-display {
 	border-radius: 50%;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	width: 100px;
+	height: 100px;
 }
 
 .vnizu {
