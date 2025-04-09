@@ -65,8 +65,7 @@ p {
 	text-decoration: none;
 }
 
-.card,
-.project1 {
+.card {
 	animation-duration: 2s;
 	animation-name: slidein;
 	background-color: #23434d78;
@@ -75,7 +74,7 @@ p {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	padding: 8px;
 	margin: 8px;
-	width: 45%;
+	width: 25%;
 	border-radius: 5px;
 	transition: all 0.3s ease-in-out;
 }
@@ -83,7 +82,6 @@ p {
 @keyframes slidein {
 	from {
 		margin-top: 2%;
-		width: 45%;
 	}
 }
 
@@ -111,15 +109,6 @@ p {
 
 a {
 	color: #9cdbfb;
-}
-
-.project1 {
-	width: 47%;
-}
-
-.project1:hover {
-	width: 48%;
-	transform: scale(1.01);
 }
 
 .selected {
