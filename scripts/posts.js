@@ -233,3 +233,22 @@ document.body.onpointermove = (event) => {
 		{ duration: 1000, fill: "forwards" }
 	);
 };
+
+document.addEventListener("DOMContentLoaded", loadRandomPost);
+
+const langBtn = document.getElementById("language-btn");
+const langOptions = document.getElementById("language-options");
+
+langBtn.addEventListener("click", () => {
+	langOptions.classList.toggle("active");
+});
+
+function setLang(lang) {
+	localStorage.setItem("lang", lang);
+
+	if (lang === "ua") {
+		window.location.href = "../index.html"; // основной — в корне
+	} else {
+		window.location.href = `/${lang}/index.html`;
+	}
+}

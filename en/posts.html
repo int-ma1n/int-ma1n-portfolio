@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Посты</title>
+		<link rel="stylesheet" href="../style/style.css" />
+		<link rel="Icon" href="../img/int.png" type="img" />
+	</head>
+	<div class="backgroundGradient">
+		<div class="bgCircle bgCircle1"></div>
+		<div class="bgCircle bgCircle2"></div>
+		<div class="bgCircle bgCircle3"></div>
+		<div class="bgCircle bgCircle4"></div>
+		<div class="bgCircle bgCircle5"></div>
+	</div>
+        <div id="blob"></div>
+		<div class="language-selector">
+		<button id="language-btn">🌐 Lang</button>
+		<div id="language-options" class="hidden">
+			<button onclick="setLang('ru')">Русский</button>
+			<button onclick="setLang('en')">English</button>
+			<button onclick="setLang('ua')">Українська</button>
+		</div>
+	</div>
+	<body>
+		<header class="pages">
+			<a href="./contacts.html">Social networks</a>
+			<a href="./index.html">Main page</a>
+			<a href="./my-projects.html">My projects</a>
+			<a href="./posts.html" class="selected">Posts</a>
+		</header>
+
+		<center>
+			<h1>Посты</h1>
+            <div class="posts">
+                <h2>Пост</h2>
+                <p>Загрузка...</p>
+            </div>
+			</p>
+		</center>
+		<script src="../scripts/posts.js"></script>
+	</body>
+</html>

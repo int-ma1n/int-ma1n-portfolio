@@ -4,8 +4,8 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contacts</title>
-		<link rel="stylesheet" href="./style.css" />
-		<link rel="Icon" href="img/int.png" type="img" />
+		<link rel="stylesheet" href="./style/style.css" />
+		<link rel="Icon" href="./img/int.png" type="img" />
 	</head>
 	<div class="backgroundGradient">
 		<div class="bgCircle bgCircle1"></div>
@@ -14,15 +14,22 @@
 		<div class="bgCircle bgCircle4"></div>
 		<div class="bgCircle bgCircle5"></div>
 	</div>
-	<div id="blob"></div>
-	<body>
-		<header class="pages">
-			<a href="./contacts.html">Мережі</a>
-			<a href="./index.html">Головна сторінка</a>
-			<a href="./my-projects.html">Мої проєкти</a>
-			<a href="./posts.html" class="selected">Пости</a>
-		</header>
-
+    <div id="blob"></div>
+    	<body>
+        <header class="pages">
+            <a href="./contacts.html">Мережі</a>
+            <a href="./index.html">Головна сторінка</a>
+            <a href="./my-projects.html">Мої проєкти</a>
+            <a href="./posts.html" class="selected">Пости</a>
+        </header>
+        <div class="language-selector">
+			<button id="language-btn">🌐 Мова</button>
+			<div id="language-options" class="hidden">
+				<button onclick="setLang('ru')">Русский</button>
+				<button onclick="setLang('en')">English</button>
+				<button onclick="setLang('ua')">Українська</button>
+			</div>
+		</div>
 		<center>
 			<h1>Пости</h1>
             <div class="posts">
@@ -31,6 +38,6 @@
             </div>
 			</p>
 		</center>
-		<script src="scripts/posts.js"></script>
+		<script src="./scripts/posts.js"></script>
 	</body>
 </html>
