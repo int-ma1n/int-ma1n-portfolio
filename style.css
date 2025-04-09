@@ -70,7 +70,8 @@ p {
 	text-decoration: none;
 }
 
-.card {
+.card,
+.posts {
 	animation-duration: 2s;
 	animation-name: slidein;
 	background-color: #23434d78;
@@ -103,6 +104,10 @@ p {
 }
 
 .card:hover {
+	transform: scale(1.02);
+}
+
+.posts:hover {
 	transform: scale(1.02);
 }
 
@@ -313,16 +318,16 @@ a {
 
 #blob {
 	background-color: white;
-	height: 200px;
+	height: 150px;
 	aspect-ratio: 1;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	translate: -50% -50%;
 	border-radius: 50%;
-	background: linear-gradient(rgb(133, 127, 255), #68497f, #7054ed75);
+	background: linear-gradient(rgb(133, 127, 255), #8a6897, #7469a475);
 	animation: rotate 20s infinite;
-	filter: blur(75px);
+	filter: blur(40px);
 }
 
 @keyframes rotate {

@@ -41,3 +41,26 @@ document.body.onpointermove = (event) => {
 		{ duration: 1000, fill: "forwards" }
 	);
 };
+
+async function loadRandomPost() {
+	try {
+		const response = await fetch("assets/posts.json");
+		if (!response.ok) throw new Error("Не удалось загрузить posts.json");
+
+		const posts = await response.json();
+		const randomIndex = Math.floor(Math.random() * posts.length);
+		const randomPost = posts[randomIndex];
+
+		const postsDiv = document.querySelector(".posts");
+		if (postsDiv) {
+			postsDiv.innerHTML = `
+          <h2>Пост</h2>
+          <p>${randomPost}</p>
+        `;
+		}
+	} catch (error) {
+		console.error("Ошибка загрузки постов:", error);
+	}
+}
+
+document.addEventListener("DOMContentLoaded", loadRandomPost);
