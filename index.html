@@ -1,70 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>int_ma1n's portfolio</title>
-        <link rel="stylesheet" href="./style.css" />
-    </head>
-    <body>
-        <header class="pages">
-            <img src="arch.png" alt="" width="20" class="arch">
-            <a href="./index.html" class="selected">Обо мне</a>
-            <a href="./my-projects.html">Мои проекты</a>
-        </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>int_ma1n's portfolio</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<header class="pages">
+			<a href="./contacts.html">Контакти</a>
+			<a href="./index.html" class="selected">Головна сторінка</a>
+			<a href="./my-projects.html">Мої проєкти</a>
+		</header>
 
-        <center>
-            <h1 class="intP">Int Main's portfolio</h1>
+		<center>
+			<h1 class="intP">Int Main's portfolio</h1>
 
-            <div id="github-info" class="card">
-                <a id="profile-gh-link-image" href="" target="_blank">
-                    <img id="avatar-display" src="" width="100" alt="Profile avatar">
-                </a>
-                <h2 id="name-display">Данные загружаются...</h2>
-                <p><b>Биография:</b> <span id="bio-display">Данные загружаются...</span></p>
-                <p><b>Репозитории:</b> <span id="repo-display">Данные загружаются...</span></p>
-                <p><b>Подписчики:</b> <span id="follows-display">Данные загружаются...</span></p>
-                <a id="profile-gh-link" href="" target="_blank">Перейти в профиль</a>
-            </div>
+			<div id="github-info" class="card">
+				<a id="profile-gh-link-image" href="" target="_blank">
+					<img
+						id="avatar-display"
+						src=""
+						width="100"
+						alt="Profile avatar"
+					/>
+				</a>
+				<h2 id="name-display">Данні завантажуються...</h2>
+				<p>
+					<b>Біографія:</b>
+					<span id="bio-display">Данні завантажуються...</span>
+				</p>
+				<p>
+					<b>Репозиторії:</b>
+					<span id="repo-display">Данні завантажуються...</span>
+				</p>
+				<p>
+					<b>Підписники:</b>
+					<span id="follows-display">Данні завантажуються...</span>
+				</p>
+				<a id="profile-gh-link" href="" target="_blank"
+					>Перейти у профіль</a
+				>
+			</div>
 
-            <div class="card">
-                <h2>About me</h2>
-                <p>
-                    Пока что ничего о себе рассказать не могу. Начинающий кодер. <br />
-                    Мой сервер "NarkoIT" - <a href="https://dsc.gg/narkoit" target="_blank">https://dsc.gg/narkoit</a>
-                </p>
-            </div>
-        </center>
-        
-        <script>
-            async function fetchGitHubInfo() {
-                const username = "int-ma1n";
-                const url = `https://api.github.com/users/${username}`;
-    
-                try {
-                    const response = await fetch(url);
-                    if (!response.ok) {
-                        alert("Ошибка при загрузке данных!");
-                        return;
-                    }
-    
-                    const data = await response.json();
+			<div class="card">
+				<h2>About me</h2>
+				<p>
+					Поки що про себе нічого розповісти не можу. Вчусь писати
+					код.
+					<br />
+				</p>
+			</div>
+		</center>
 
-                    document.getElementById("avatar-display").src = data.avatar_url;
-                    document.getElementById("name-display").textContent = data.name || data.login;
-                    document.getElementById("bio-display").textContent = data.bio || "Биография отсутствует";
-                    document.getElementById("repo-display").textContent = data.public_repos;
-                    document.getElementById("follows-display").textContent = data.followers;
-                    document.getElementById("profile-gh-link").href = data.html_url;
-                    document.getElementById("profile-gh-link-image").href = data.html_url;
-                    
+		<script>
+			async function fetchGitHubInfo() {
+				const username = "int-ma1n";
+				const url = `https://api.github.com/users/${username}`;
 
-                } catch (error) {
-                    console.error(error);
-                    document.getElementById("github-info").innerHTML = "Ошибка при подключении к API.";
-                }
-            }
-            fetchGitHubInfo();
-        </script>
-    </body>
+				try {
+					const response = await fetch(url);
+					if (!response.ok) {
+						alert("Ошибка при загрузке данных!");
+						return;
+					}
+
+					const data = await response.json();
+
+					document.getElementById("avatar-display").src =
+						data.avatar_url;
+					document.getElementById("name-display").textContent =
+						data.name || data.login;
+					document.getElementById("bio-display").textContent =
+						data.bio || "Биография отсутствует";
+					document.getElementById("repo-display").textContent =
+						data.public_repos;
+					document.getElementById("follows-display").textContent =
+						data.followers;
+					document.getElementById("profile-gh-link").href =
+						data.html_url;
+					document.getElementById("profile-gh-link-image").href =
+						data.html_url;
+				} catch (error) {
+					console.error(error);
+					document.getElementById("github-info").innerHTML =
+						"Ошибка при подключении к API.";
+				}
+			}
+			fetchGitHubInfo();
+		</script>
+	</body>
 </html>
