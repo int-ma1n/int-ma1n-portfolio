@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 
 body {
-	background-color: black;
+	background-color: rgb(93, 122, 123);
 	margin: 0;
 	padding: 0;
-	background: linear-gradient(135deg, #121212, #1c1c1c);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	color: #e0e0e0;
+	color: #e0e0e0ae;
 }
 
 * {
@@ -19,17 +18,17 @@ body {
 
 h1 {
 	margin-top: 100px;
+	color: #020606;
 }
 
-h1,
 h2,
 h3 {
-	color: #ffffff;
+	color: #ffffffb5;
 	margin-bottom: 4px;
 }
 
 p {
-	color: #e0e0e0;
+	color: #e0e0e0da;
 	margin-top: 3px;
 }
 
@@ -38,7 +37,7 @@ p {
 }
 
 .pages {
-	background-color: #121212;
+	background-color: #11282a8b;
 	margin: auto;
 	padding: 8px;
 	display: flex;
@@ -48,7 +47,7 @@ p {
 	top: 0;
 	width: 600px;
 	box-sizing: border-box;
-	border: 2px solid white;
+	border: 2px solid rgba(102, 184, 188, 0.5);
 	border-radius: 8px;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
@@ -60,7 +59,7 @@ p {
 }
 
 .pages a {
-	color: white;
+	color: rgba(255, 255, 255, 0.667);
 	text-decoration: none;
 }
 
@@ -68,7 +67,7 @@ p {
 .project1 {
 	animation-duration: 2s;
 	animation-name: slidein;
-	background-color: #242424;
+	background-color: #23434d78;
 	backdrop-filter: blur(5px);
 	-webkit-backdrop-filter: blur(5px);
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -110,7 +109,7 @@ a {
 }
 
 .selected {
-	border-bottom: 2px solid #ffffff;
+	border-bottom: 2px solid #ffffffb8;
 }
 
 .pages a {
@@ -138,4 +137,192 @@ a {
 	bottom: 15px;
 	width: 100%;
 	font-size: 14px;
+}
+
+.backgroundGradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 0;
+	background: radial-gradient(#648287, #081e1e);
+	filter: blur(100px);
+	overflow: hidden;
+}
+
+.bgCircle {
+	border-radius: 100%;
+	width: 20vh;
+	height: 20vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	user-select: none;
+}
+
+.bgCircle4 {
+	animation-timing-function: ease-in-out;
+	animation-duration: 7s;
+	animation-name: bg-circle-anim-4;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background: #6fbdd985;
+}
+
+@keyframes bg-circle-anim-4 {
+	from {
+		left: 33.8%;
+		top: 28%;
+		width: 50vh;
+		height: 50vh;
+	}
+
+	50% {
+		left: 17.8%;
+		top: 50%;
+		width: 30vh;
+		height: 30vh;
+	}
+
+	to {
+		left: 35.6%;
+		top: 32.8%;
+		width: 43.8vh;
+		height: 43.8vh;
+	}
+}
+
+.bgCircle3 {
+	animation-timing-function: ease-in-out;
+	animation-duration: 4s;
+	animation-name: bg-circle-anim-3;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background: #4e686bc7;
+}
+
+@keyframes bg-circle-anim-3 {
+	from {
+		left: 40%;
+		top: 39.1%;
+		width: 30vh;
+		height: 30vh;
+	}
+
+	50% {
+		left: 13.7%;
+		top: 13%;
+		width: 48.4vh;
+		height: 50.4vh;
+	}
+
+	to {
+		left: 33.7%;
+		top: 23%;
+		width: 48.4vh;
+		height: 50.4vh;
+	}
+}
+
+.bgCircle2 {
+	animation-timing-function: ease-in-out;
+	animation-duration: 7s;
+	animation-name: bg-circle-anim-2;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background: #6e766f;
+}
+
+@keyframes bg-circle-anim-2 {
+	from {
+		left: 14.5%;
+		top: -15.5%;
+		width: 75vh;
+		height: 75vh;
+	}
+
+	50% {
+		left: 34.3%;
+		top: -10.4%;
+		width: 70vh;
+		height: 70vh;
+	}
+
+	to {
+		left: 24.3%;
+		top: 10.4%;
+		width: 76vh;
+		height: 76vh;
+		background: #00284775;
+	}
+}
+
+.bgCircle1 {
+	animation-timing-function: ease-in-out;
+	animation-duration: 7s;
+	animation-name: bg-circle-anim-1;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background: #92c4be81;
+}
+
+@keyframes bg-circle-anim-1 {
+	from {
+		left: 42.9%;
+		top: 26%;
+		width: 70vh;
+		height: 70vh;
+	}
+
+	50% {
+		left: 42.9%;
+		top: 26%;
+		width: 70vh;
+		height: 70vh;
+	}
+
+	to {
+		left: 20.4%;
+		top: 8%;
+		width: 90vh;
+		height: 90vh;
+	}
+}
+
+.bgCircle5 {
+	animation-timing-function: ease-in-out;
+	animation-duration: 7s;
+	animation-name: bg-circle-anim-5;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background: #ffffff00;
+	border: 15px solid #8597b9;
+	border-radius: 50%;
+}
+
+#blob {
+	background-color: white;
+	height: 200px;
+	aspect-ratio: 1;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	border-radius: 50%;
+	background: linear-gradient(rgb(133, 127, 255), #68497f, #7054ed75);
+	animation: rotate 20s infinite;
+	filter: blur(75px);
+}
+
+@keyframes rotate {
+	from {
+		rotate: 0deg;
+	}
+	50% {
+		scale: 1 1.5;
+	}
+	to {
+		rotate: 360deg;
+	}
 }
