@@ -120,7 +120,7 @@ document.getElementById("guitar-word").addEventListener("click", () => {
 	const randomLevel = levels[Math.floor(Math.random() * levels.length)];
 	document.getElementById(
 		"skill-text"
-	).textContent = `Вы получили скилл ${randomSkill} 🧠 Уровень: ${randomLevel}`;
+	).textContent = `Вы получили скилл: ${randomSkill} 🧠 Уровень: ${randomLevel}`;
 
 	document.getElementById("skill-modal").classList.remove("hidden");
 });
