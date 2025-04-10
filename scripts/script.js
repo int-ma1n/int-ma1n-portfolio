@@ -81,3 +81,32 @@ function setLang(lang) {
 		window.location.href = `/${lang}/index.html`;
 	}
 }
+
+const skills = [
+	"Случайное чесание уха через капюшон",
+	"Умение закрыть 15 вкладок и снова их открыть",
+	"Сверхзвуковое проматывание TikTok",
+	"Понимание смысла мемов без контекста",
+	"Телепатическое ощущение Wi-Fi слабости",
+	"Мастерство кликать 'Пропустить рекламу' с первого кадра",
+	"Закрытие вкладки за миллисекунду до того, как зашёл учитель",
+	"Ультра-инстинкт избегания встреч с соседями на лестнице",
+	"Невидимый режим в Zoom",
+	"Чтение чата во сне",
+];
+
+const levels = ["Легендарный", "Мифический", "Редкий"];
+
+document.getElementById("guitar-word").addEventListener("click", () => {
+	const randomSkill = skills[Math.floor(Math.random() * skills.length)];
+	const randomLevel = levels[Math.floor(Math.random() * levels.length)];
+	document.getElementById(
+		"skill-text"
+	).textContent = `Вы получили скилл ${randomSkill} 🧠 Уровень: ${randomLevel}`;
+
+	document.getElementById("skill-modal").classList.remove("hidden");
+});
+
+document.getElementById("close-modal").addEventListener("click", () => {
+	document.getElementById("skill-modal").classList.add("hidden");
+});
