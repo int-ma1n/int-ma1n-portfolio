@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Посты</title>
+		<title>Contacts</title>
 		<link rel="stylesheet" href="../style/style.css" />
 		<link rel="Icon" href="../img/int.png" type="img" />
 	</head>
@@ -14,8 +14,8 @@
 		<div class="bgCircle bgCircle4"></div>
 		<div class="bgCircle bgCircle5"></div>
 	</div>
-        <div id="blob"></div>
-		<div class="language-selector">
+	<div id="blob"></div>
+	<div class="language-selector">
 		<button id="language-btn">🌐 Язык</button>
 		<div id="language-options" class="hidden">
 			<button onclick="setLang('ru')">Русский</button>
@@ -23,28 +23,33 @@
 			<button onclick="setLang('ua')">Українська</button>
 		</div>
 	</div>
-	<div id="blob"></div>
 	<body>
 		<header class="pages">
-			<a href="./contacts.html">Соц.сети</a>
+			<a href="./contacts.html">Соц. Сети</a>
 			<a href="./index.html">Главная страница</a>
 			<a href="./my-projects.html">Мои проекты</a>
-			<a href="./posts.html" class="selected">Посты</a>
-            <a href="./casino.html">Казино</a>
+			<a href="./posts.html">Посты</a>
+			<a href="./casino.html" class="selected">Казино</a>
 		</header>
 
 		<center>
-			<h1>Посты</h1>
-            <div class="posts">
-                <h2>Пост</h2>
-                <p>Загрузка...</p>
-            </div>
-            <div class="facts">
-                <h2>Интересный факт:</h2>
-                <p>Загрузка...</p>
-            </div>
-			</p>
+			<h1>Казино</h1>
+			<div class="card">
+				<h2>Крутое казино:</h2>
+				<button id="play-btn" class="playbutton">Играть</button>
+				<br />
+				<p>Слоты:</p>
+				<p id="slots"></p>
+				<p id="result"></p>
+			</div>
+			<a href="https://int-ma1n.github.io/"
+				><img src="../img/intma1n.gif" alt="intma1n" class="pansan"
+			/></a>
+
+			<a href="https://pansangg.github.io/">
+				<img src="../img/pansangg.gif" alt="pansangg" class="pansan" />
+			</a>
 		</center>
-		<script src="../scripts/posts.js"></script>
+		<script src="../scripts/casino.js"></script>
 	</body>
 </html>

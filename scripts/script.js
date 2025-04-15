@@ -63,8 +63,6 @@ async function loadRandomPost() {
 	}
 }
 
-document.addEventListener("DOMContentLoaded", loadRandomPost);
-
 const langBtn = document.getElementById("language-btn");
 const langOptions = document.getElementById("language-options");
 
@@ -76,7 +74,7 @@ function setLang(lang) {
 	localStorage.setItem("lang", lang);
 
 	if (lang === "ua") {
-		window.location.href = "../index.html"; // основной — в корне
+		window.location.href = "../index.html";
 	} else {
 		window.location.href = `/${lang}/index.html`;
 	}

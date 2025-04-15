@@ -292,7 +292,7 @@ function setLang(lang) {
 	localStorage.setItem("lang", lang);
 
 	if (lang === "ua") {
-		window.location.href = "../index.html"; // основной — в корне
+		window.location.href = "../index.html";
 	} else {
 		window.location.href = `/${lang}/index.html`;
 	}
